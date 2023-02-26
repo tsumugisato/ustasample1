@@ -4,27 +4,49 @@ using UnityEngine;
  
 public class DragObj : MonoBehaviour
 {
-    SphereCollider sphereCol;
+    Plane plane;   
+    bool isGrabbing;
+    Transform cube;
  
+    // Start is called before the first frame update
     void Start()
     {
-        sphereCol = GetComponent<SphereCollider>();
+        plane = new Plane(Vector3.up, Vector3.up);
     }
  
-    void OnMouseDrag()
+    // Update is called once per frame
+    void Update()
     {
-        sphereCol.enabled = false;
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if(Input.GetMouseButtonDown(0))
         {
-            transform.position = new Vector3 (hit.point.x, 0, hit.point.z);
-            Debug.Log(hit.collider.name);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+ 
+            RaycastHit hit;
+            if(Physics.Raycast(ray,out hit, Mathf.Infinity))
+            {
+                if (hit.collider.tag == "Player")
+                {
+                    isGrabbing = true;
+                    cube = hit.transform;
+                }
+            }
         }
+ 
+ 
+        if (isGrabbing)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            float rayDistance;
+            plane.Raycast(ray, out rayDistance);
+ 
+            cube.position = ray.GetPoint(rayDistance);
+ 
+            if (Input.GetMouseButtonUp(0))
+            {
+                isGrabbing = false;
+            }
+        }
+ 
     }
  
-    void OnMouseUp()
-    {
-        sphereCol.enabled = true;
-    }
 }
