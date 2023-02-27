@@ -31,7 +31,7 @@ public class JoyStick_Cam : MonoBehaviour
         positionX *= aimSensitivity;
         positionY *= aimSensitivity;
 
-        Rotation();
+        // Rotation();
     }
 
 
