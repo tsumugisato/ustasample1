@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
  
 public class GameManager: MonoBehaviour {
  
@@ -20,15 +21,25 @@ public class GameManager: MonoBehaviour {
      
     // Update is called once per frame
     void Update () {
+        
+        if(EventSystem.current.IsPointerOverGameObject()){
+            return;
+        }
+
+        if (Input.GetMouseButtonDown (0)){
+            
+        }
          
     }
  
     //ボタンを押した時の処理
     public void PushButton()
     {
+        Debug.Log("ボタンを押す");
         //もしサブカメラがオフだったら
         if (!subCamera.enabled)
         {
+            Debug.Log("サブカメラつけろ");
             //サブカメラをオンにして
             subCamera.enabled = true;
  
@@ -41,6 +52,7 @@ public class GameManager: MonoBehaviour {
         //もしサブカメラがオンだったら
         else
         {
+            Debug.Log("サブカメラオフにしろ");
             //サブカメラをオフにして
             subCamera.enabled = false;
  

@@ -3,7 +3,16 @@ guid: 96db612920eb74d7fa9f2510fdd2ba33
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - objectToChange: {instanceID: 0}
+  - glassButton: {instanceID: 0}
+  - redButton: {instanceID: 0}
+  - tileButton: {instanceID: 0}
+  - woodButton: {instanceID: 0}
+  - glassMaterial: {fileID: 2100000, guid: bed885917041a45e9b14faf784518551, type: 2}
+  - redMaterial: {fileID: 2100000, guid: 11a0c43ca1c6440b7a1a36a0d4e042d0, type: 2}
+  - tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
+  - woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

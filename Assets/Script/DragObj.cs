@@ -7,6 +7,8 @@ public class DragObj : MonoBehaviour
     Plane plane;   
     bool isGrabbing;
     Transform cube;
+    public Camera subCamera;
+    public Camera Camera;
  
     // Start is called before the first frame update
     void Start()
@@ -19,10 +21,35 @@ public class DragObj : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            if (subCamera != null){ 
+
+            
             Debug.Log("ああああいいいいえええ");
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
+            
+
  
             RaycastHit hit;
+            if(Physics.Raycast(ray,out hit, Mathf.Infinity))
+            {
+                Debug.Log("ははは");
+                if (hit.collider.tag == "Player")
+                {
+                    Debug.Log("iiii");
+
+                 
+                    isGrabbing = true;
+                    Debug.Log(isGrabbing);
+                    cube = hit.transform;
+                }
+            }
+            }
+            else
+            {
+                Debug.Log("ここおおおおおおお");
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                RaycastHit hit;
             if(Physics.Raycast(ray,out hit, Mathf.Infinity))
             {
                 if (hit.collider.tag == "Player")
@@ -33,10 +60,13 @@ public class DragObj : MonoBehaviour
                     cube = hit.transform;
                 }
             }
+
+            }
         }
  
  
-        if (isGrabbing)
+        if (subCamera == null){
+             if (isGrabbing)
         {
             Debug.Log("ううううううおおおお");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -50,38 +80,13 @@ public class DragObj : MonoBehaviour
                 isGrabbing = false;
             }
         }
+
+        }
+        else{
+            Debug.Log("いけた");
+        }
+       
  
     }
  
 }
-
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
- 
-// public class DragObj : MonoBehaviour
-// {
-//     SphereCollider sphereCol;
- 
-//     void Start()
-//     {
-//         sphereCol = GetComponent<SphereCollider>();
-//     }
- 
-//     void OnMouseDrag()
-//     {
-//         sphereCol.enabled = false;
-//         RaycastHit hit;
-//         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-//         if (Physics.Raycast(ray, out hit))
-//         {
-//             transform.position = new Vector3 (hit.point.x, 0, hit.point.z);
-//             Debug.Log(hit.collider.name);
-//         }
-//     }
- 
-//     void OnMouseUp()
-//     {
-//         sphereCol.enabled = true;
-//     }
-// }
