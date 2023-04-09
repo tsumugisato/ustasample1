@@ -25,14 +25,15 @@ public class  ButtonController : MonoBehaviour
     // 初期化処理
     void Start()
     {
-        
-           woodButton.onClick.AddListener(OnWoodButtonClick);
+
         // glassButtonのOnClickイベントにOnglassButtonClick関数を追加する
         glassButton.onClick.AddListener(OnglassButtonClick);
         // RedButtonのOnClickイベントにOnRedButtonClick関数を追加する
         redButton.onClick.AddListener(OnRedButtonClick);
 
-        glassButton.onClick.AddListener(OnTileButtonClick);
+        tileButton.onClick.AddListener(OnTileButtonClick);
+
+    　　woodButton.onClick.AddListener(OnWoodButtonClick);
 
     }
 

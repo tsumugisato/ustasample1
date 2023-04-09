@@ -14,6 +14,7 @@ public class DragObj : MonoBehaviour
     void Start()
     {
         plane = new Plane(Vector3.up, Vector3.up);
+       
     }
  
     // Update is called once per frame
@@ -21,11 +22,11 @@ public class DragObj : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if (subCamera != null){ 
+            if (Camera != null){ 
 
             
             Debug.Log("ああああいいいいえええ");
-            Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
             
 
  
@@ -65,7 +66,8 @@ public class DragObj : MonoBehaviour
         }
  
  
-        if (subCamera == null){
+        // if (subCamera == null){
+        //       Debug.Log("っっっっk");
              if (isGrabbing)
         {
             Debug.Log("ううううううおおおお");
@@ -78,10 +80,11 @@ public class DragObj : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 isGrabbing = false;
+                 Debug.Log(isGrabbing);
             }
         }
 
-        }
+        // }
         else{
             Debug.Log("いけた");
         }
