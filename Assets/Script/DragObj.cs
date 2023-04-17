@@ -9,6 +9,7 @@ public class DragObj : MonoBehaviour
     Transform cube;
     public Camera subCamera;
     public Camera Camera;
+    
  
     // Start is called before the first frame update
     void Start()

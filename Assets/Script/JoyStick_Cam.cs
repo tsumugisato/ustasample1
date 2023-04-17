@@ -18,11 +18,13 @@ public class JoyStick_Cam : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("ssssss");
         stickMovement = 3 * (Screen.width + Screen.height) /100;
     }
 
     public void Move(BaseEventData data)
     {
+         Debug.Log("uuuuuuu");
         PointerEventData pointer = data as PointerEventData;
 
         positionX = pointer.position.x /stickMovement;
@@ -31,14 +33,18 @@ public class JoyStick_Cam : MonoBehaviour
         positionX *= aimSensitivity;
         positionY *= aimSensitivity;
 
-        // Rotation();
+         Rotation();
     }
-
 
     public void Rotation()
     {
+        Debug.Log(tempPosX);
+        Debug.Log(positionX);
+        Debug.Log(tempPosY);
+
         if(positionX != tempPosX)
         {
+            Debug.Log("tttttt");
             if(tempPosX == 0)
             {
                 tempPosX = positionX;
@@ -63,6 +69,7 @@ public class JoyStick_Cam : MonoBehaviour
 
          if(positionY != tempPosY)
         {
+              Debug.Log("ggggg");
             if(tempPosY == 0)
             {
                 tempPosY = positionY;
@@ -88,6 +95,7 @@ public class JoyStick_Cam : MonoBehaviour
     
     public void PointerUp(BaseEventData data)
     {
+         Debug.Log("llllllll");
         PositionInitialization();
 
         Rotation();
@@ -101,3 +109,46 @@ public class JoyStick_Cam : MonoBehaviour
 }
 
 
+// using UnityEngine;
+// using UnityEngine.EventSystems;
+
+// public class JoyStick_Cam : MonoBehaviour
+// {
+//     private bool isTouching = false;
+//     private Vector2 touchStartPosition;
+
+//     // 回転する速度
+//     public float rotationSpeed = 10f;
+
+//     void Update()
+//     {
+//         // 画面左半分をタッチしているかどうかをチェック
+//         if (Input.touchCount > 0 && Input.GetTouch(0).position.x < Screen.width / 2f)
+//         {
+//             Touch touch = Input.GetTouch(0);
+
+//             // タッチの開始
+//             if (touch.phase == TouchPhase.Began)
+//             {
+//                 isTouching = true;
+//                 touchStartPosition = touch.position;
+//             }
+//             // タッチの移動
+//             else if (touch.phase == TouchPhase.Moved && isTouching)
+//             {
+//                 // タッチした位置と現在の位置の差分を求める
+//                 Vector2 deltaPosition = touch.position - touchStartPosition;
+
+//                 // Playerオブジェクトを回転する
+//                 transform.Rotate(-deltaPosition.y * rotationSpeed * Time.deltaTime,
+//                                  deltaPosition.x * rotationSpeed * Time.deltaTime,
+//                                  0f);
+//             }
+//             // タッチの終了
+//             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+//             {
+//                 isTouching = false;
+//             }
+//         }
+//     }
+// }
