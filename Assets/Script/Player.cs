@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("right"))
         {
             animator.SetBool("Running", true);
+            
         }
         if (Input.GetKeyUp("right"))
         {

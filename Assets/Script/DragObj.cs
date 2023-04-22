@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.EventSystems;
+
 public class DragObj : MonoBehaviour
 {
     Plane plane;   
@@ -9,7 +10,8 @@ public class DragObj : MonoBehaviour
     Transform cube;
     public Camera subCamera;
     public Camera Camera;
-    
+    private float rotationAmount = 90f;
+
  
     // Start is called before the first frame update
     void Start()
@@ -89,8 +91,7 @@ public class DragObj : MonoBehaviour
         else{
             Debug.Log("いけた");
         }
-       
- 
     }
+
  
 }
