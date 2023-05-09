@@ -16,6 +16,9 @@ public class JoyStick_Cam : MonoBehaviour
 
     public static float rotX = 0,rotY = 0;
 
+    public Camera subCamera;
+    public Camera Camera;
+
     private void Start()
     {
         Debug.Log("ssssss");

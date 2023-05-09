@@ -24,14 +24,21 @@ public class  ButtonController : MonoBehaviour
 
     public Material woodMaterial;
 
-    private SwitchPanels switchpanels;
+    public bool OnKitchen = false;
 
+    private SwitchPanels switchPanels; 
+
+    // private bool chareCubeVisible = false;
+    // private bool deskCubeVisible = false;
+    // private bool tileCubeVisible = false;
+
+
+      // int mySavedInt = PlayerPrefs.GetInt("MyInt");
 
     // 初期化処理
     void Start()
     {
 
-        switchpanels = GameObject.FindObjectOfType<SwitchPanels>();
         // glassButtonのOnClickイベントにOnglassButtonClick関数を追加する
         glassButton.onClick.AddListener(OnglassButtonClick);
         // RedButtonのOnClickイベントにOnRedButtonClick関数を追加する
@@ -40,80 +47,116 @@ public class  ButtonController : MonoBehaviour
         tileButton.onClick.AddListener(OnTileButtonClick);
         
         woodButton.onClick.AddListener(OnWoodButtonClick);
-
-
-       // Debug.Log(switchpanels.Onwall);
-
-        
+        //Debug.Log(switchpanels.Onwall)
+       SwitchPanels switchPanels = FindObjectOfType<SwitchPanels>();
+  
+    // 値が保存されているときの処理
 
     }
 
 
     // glassButtonがクリックされたときに呼び出される関数
-    public void OnglassButtonClick()
+    void OnglassButtonClick()
     {
+        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+  
+    Debug.Log("glassmySavedInt=="+ mySavedInt);
+
+      
+        //Debug.Log("mySavedInt=="+ mySavedInt);
         // objectToChangeがnullでないことを確認する
-        if (wallChange != null)
+        if (wallChange != null);
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = wallChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 2)
             {
                 // Materialを変更する
                 renderer.material = glassMaterial;
+              //  PlayerPrefs.DeleteKey("MyInt");
+                
             }
         }
-        if (FloorChange != null && switchpanels.OnWall == false)
+        if (FloorChange != null);
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = FloorChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 3)
             {
                 // Materialを変更する
                 renderer.material = glassMaterial;
+             //   PlayerPrefs.DeleteKey("MyInt");
             }
         }
+        // if (FloorChange != null);
+        // {
+        //     // Rendererコンポーネントを取得する
+        //     Renderer renderer = FloorChange.GetComponent<Renderer>();
+
+        //     // Rendererコンポーネントがnullでないことを確認する
+        //     if (renderer != null && mySavedInt == 4)
+        //     {
+        //         // Materialを変更する
+                 
+        //      //   PlayerPrefs.DeleteKey("MyInt");
+        //     }
+        // }
+        
+
     }
 
     // RedButtonがクリックされたときに呼び出される関数
-    public void OnRedButtonClick()
+    void OnRedButtonClick()
     {
+        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+  
+    Debug.Log("redmySavedInt=="+ mySavedInt);
+
+        // Debug.Log("OnKitchen = " + switchPanels.OnKitchen);
         // objectToChangeがnullでないことを確認する
-        if (wallChange != null && switchpanels.OnWall == true);
+        if (wallChange != null);
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = wallChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 2)
             {
                 // Materialを変更する
                 renderer.material = redMaterial;
+              //  PlayerPrefs.DeleteKey("MyInt");
             }
-        } 
-        if (FloorChange != null && switchpanels.OnWall == false);
+        }
+        if (FloorChange != null);
         {
+
             // Rendererコンポーネントを取得する
             Renderer renderer = FloorChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 3)
             {
                 // Materialを変更する
                 renderer.material = redMaterial;
+               // PlayerPrefs.DeleteKey("MyInt");
             }
         }
     }
 
      // RedButtonがクリックされたときに呼び出される関数
-    public void OnTileButtonClick()
+    void OnTileButtonClick()
     {
+        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+  
+    Debug.Log("tilemySavedInt=="+ mySavedInt);
+
+      //  Debug.Log("OnKitchen = " + switchPanels.OnKitchen);
         // objectToChangeがnullでないことを確認する
-        if (wallChange != null && switchpanels.OnWall == true);
+        if (wallChange != null);
         {
             Debug.Log("ああああ");
            // Debug.Log(switchpanels.Onwall);
@@ -121,13 +164,14 @@ public class  ButtonController : MonoBehaviour
             Renderer renderer = wallChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 2)
             {
                 // Materialを変更する
                 renderer.material = tileMaterial;
+               // PlayerPrefs.DeleteKey("MyInt");
             }
         }
-         if (FloorChange != null && switchpanels.OnWall == false)
+         if (FloorChange != null);
         {
             Debug.Log("いいいい");
             //Debug.Log(switchpanels.Onwall);
@@ -135,42 +179,47 @@ public class  ButtonController : MonoBehaviour
             Renderer renderer = FloorChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 3)
             {
                 // Materialを変更する
                 renderer.material = tileMaterial;
+               // PlayerPrefs.DeleteKey("MyInt");
             }
         }
     }
 
      // RedButtonがクリックされたときに呼び出される関数
-    public void OnWoodButtonClick()
+    void OnWoodButtonClick()
     {
-        // objectToChangeがnullでないことを確認する
-        if (wallChange != null)
+        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+  
+    Debug.Log("woodmySavedInt=="+ mySavedInt);
+      
+
+        if (wallChange != null);
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = wallChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 2)
             {
                 // Materialを変更する
                 renderer.material = woodMaterial;
+               // PlayerPrefs.DeleteKey("MyInt");
             }
         }
-        if (FloorChange != null && switchpanels.OnWall == false)
+        if (FloorChange != null);
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = FloorChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
-            if (renderer != null)
+            if (renderer != null && mySavedInt == 3)
             {
                 // Materialを変更する
                 renderer.material = woodMaterial;
             }
         }
     }
-
 }

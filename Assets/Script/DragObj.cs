@@ -51,7 +51,7 @@ public class DragObj : MonoBehaviour
             else
             {
                 Debug.Log("ここおおおおおおお");
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
 
                 RaycastHit hit;
             if(Physics.Raycast(ray,out hit, Mathf.Infinity))
@@ -67,10 +67,6 @@ public class DragObj : MonoBehaviour
 
             }
         }
- 
- 
-        // if (subCamera == null){
-        //       Debug.Log("っっっっk");
              if (isGrabbing)
         {
             Debug.Log("ううううううおおおお");
@@ -87,11 +83,9 @@ public class DragObj : MonoBehaviour
             }
         }
 
-        // }
         else{
-            Debug.Log("いけた");
+          //  Debug.Log("終わり");
         }
     }
 
- 
 }
