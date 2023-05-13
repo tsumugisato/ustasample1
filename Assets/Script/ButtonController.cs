@@ -26,6 +26,16 @@ public class  ButtonController : MonoBehaviour
 
     public bool OnKitchen = false;
 
+    public GameObject chair1;
+
+    public GameObject table1;
+
+    private bool chairVisible = false;
+
+    private bool tableVisible = false;
+
+
+
     private SwitchPanels switchPanels; 
 
     // private bool chareCubeVisible = false;
@@ -112,6 +122,10 @@ public class  ButtonController : MonoBehaviour
     // RedButtonがクリックされたときに呼び出される関数
     void OnRedButtonClick()
     {
+         tableVisible = !tableVisible;
+
+        table1.SetActive(tableVisible);
+
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("redmySavedInt=="+ mySavedInt);
@@ -191,6 +205,12 @@ public class  ButtonController : MonoBehaviour
      // RedButtonがクリックされたときに呼び出される関数
     void OnWoodButtonClick()
     {
+
+        chairVisible = !chairVisible;
+
+        chair1.SetActive(chairVisible);
+
+
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("woodmySavedInt=="+ mySavedInt);

@@ -25,7 +25,7 @@ public class DragObj : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if (Camera != null){ 
+            if (Camera.enabled == true){ 
 
             
             Debug.Log("ああああいいいいえええ");
@@ -50,20 +50,21 @@ public class DragObj : MonoBehaviour
             }
             else
             {
-                Debug.Log("ここおおおおおおお");
-                Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
+            //     Debug.Log("ここおおおおおおお");
+            //     Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
 
-                RaycastHit hit;
-            if(Physics.Raycast(ray,out hit, Mathf.Infinity))
-            {
-                if (hit.collider.tag == "Player")
-                {
+            //     RaycastHit hit;
+            // if(Physics.Raycast(ray,out hit, Mathf.Infinity))
+            // {
+            //     if (hit.collider.tag == "Player")
+            //     {
                  
-                    isGrabbing = true;
-                    Debug.Log(isGrabbing);
-                    cube = hit.transform;
-                }
-            }
+            //         isGrabbing = true;
+            //         Debug.Log(isGrabbing);
+            //         cube = hit.transform;
+            //     }
+            // }
+            return;
 
             }
         }

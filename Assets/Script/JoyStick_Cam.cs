@@ -18,15 +18,21 @@ public class JoyStick_Cam : MonoBehaviour
 
     public Camera subCamera;
     public Camera Camera;
+    public GameObject acube;
 
     private void Start()
     {
         Debug.Log("ssssss");
         stickMovement = 3 * (Screen.width + Screen.height) /100;
+
+  
     }
 
     public void Move(BaseEventData data)
     {
+
+         if (subCamera.enabled == true){
+
          Debug.Log("uuuuuuu");
         PointerEventData pointer = data as PointerEventData;
 
@@ -36,18 +42,20 @@ public class JoyStick_Cam : MonoBehaviour
         positionX *= aimSensitivity;
         positionY *= aimSensitivity;
 
-         Rotation();
+       
+             Rotation();
+        }
+        
     }
 
     public void Rotation()
     {
-        Debug.Log(tempPosX);
-        Debug.Log(positionX);
-        Debug.Log(tempPosY);
+         Debug.Log("tttttt");
 
-        if(positionX != tempPosX)
-        {
-            Debug.Log("tttttt");
+        if(positionX != tempPosX  && subCamera.enabled == true)
+        {  
+
+           
             if(tempPosX == 0)
             {
                 tempPosX = positionX;
@@ -70,7 +78,7 @@ public class JoyStick_Cam : MonoBehaviour
             tempPosX = positionX;
         }
 
-         if(positionY != tempPosY)
+         if(positionY != tempPosY && subCamera.enabled == true)
         {
               Debug.Log("ggggg");
             if(tempPosY == 0)
@@ -98,10 +106,13 @@ public class JoyStick_Cam : MonoBehaviour
     
     public void PointerUp(BaseEventData data)
     {
-         Debug.Log("llllllll");
+        if (subCamera.enabled == true){
+Debug.Log("llllllll");
         PositionInitialization();
 
         Rotation();
+        }
+        
     }
 
     public void PositionInitialization()
