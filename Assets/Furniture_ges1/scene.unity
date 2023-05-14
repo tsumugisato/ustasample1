@@ -2787,6 +2787,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1472401655}
     m_Modifications:
     - target: {fileID: 100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2826,7 +2830,10 @@ PrefabInstance:
     - {fileID: 9500000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1518684016}
   m_SourcePrefab: {fileID: 100100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
 --- !u!4 &906863101 stripped
 Transform:
@@ -2877,6 +2884,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subCamera: {fileID: 474998915}
   Camera: {fileID: 231095702}
+--- !u!114 &914236751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914236745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 914236745}
+  rightButton: {fileID: 1237248727}
+  leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 1206477335}
+  secondButton: {fileID: 1780949607}
 --- !u!1001 &924631056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3936,6 +3960,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5388523262566565402, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 914236749}
+    - targetCorrespondingSourceObject: {fileID: 5388523262566565402, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 914236751}
   m_SourcePrefab: {fileID: 100100000, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
 --- !u!1 &1237248724
 GameObject:
@@ -5199,6 +5226,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ea65a302fdcb31f4a85e3a7fbbb82db0, type: 3}
   m_PrefabInstance: {fileID: 906863100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1518684016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518684013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 1518684013}
+  rightButton: {fileID: 1237248727}
+  leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 1206477335}
+  secondButton: {fileID: 1780949607}
 --- !u!1001 &1590444419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6067,6 +6111,8 @@ MonoBehaviour:
   wallCube: {fileID: 1846291204}
   rightButton: {fileID: 1237248727}
   leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
 --- !u!1 &1859432641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6397,9 +6443,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: df1666880554cd446af9d788cc7a7a19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1897152842}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: df1666880554cd446af9d788cc7a7a19, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1897152846}
   m_SourcePrefab: {fileID: 100100000, guid: df1666880554cd446af9d788cc7a7a19, type: 3}
 --- !u!4 &1897152828 stripped
 Transform:
@@ -6453,21 +6496,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.6965213, y: 3.1700726, z: 3.723827}
   m_Center: {x: -2.0943698e-10, y: 1.5930612, z: 0.0000019072056}
---- !u!114 &1897152846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975644825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallCube: {fileID: 975644825}
-  rightButton: {fileID: 1237248727}
-  leftButton: {fileID: 1967763191}
 --- !u!1 &1911766521
 GameObject:
   m_ObjectHideFlags: 0

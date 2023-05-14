@@ -15,8 +15,6 @@ public class RotateObj : MonoBehaviour
 
     private void Start()
     {
-        firstButton.onClick.AddListener(() =>
-        {
         // 右ボタンが押されたときに実行する処理を設定する
         rightButton.onClick.AddListener(() =>
         {
@@ -36,8 +34,6 @@ public class RotateObj : MonoBehaviour
                 StartCoroutine(RotateWallCube(wallCube, -90f));
             }
         });
-        }
-        );
     }
 
     // 指定したWallCubeオブジェクトを指定した角度だけ回転させるコルーチン
