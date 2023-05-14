@@ -1,0 +1,22 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="GameManager">
+			<method name="PushButton"/>
+		</type>
+		<type fullname="JoyStick_Cam">
+			<method name="Move"/>
+			<method name="PointerUp"/>
+		</type>
+		<type fullname="JoyStick_Move">
+			<method name="Move"/>
+			<method name="PointerDown"/>
+			<method name="PointerUp"/>
+		</type>
+		<type fullname="SwitchPanels">
+			<method name="ShowFloorPanel"/>
+			<method name="ShowFloorPanel"/>
+			<method name="ShowKitchenPanel"/>
+			<method name="ShowWallPanel"/>
+		</type>
+	</assembly>
+</linker>

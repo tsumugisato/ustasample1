@@ -8,11 +8,15 @@ public class RotateObj : MonoBehaviour
     public GameObject wallCube;
     public Button rightButton;
     public Button leftButton;
+    public Button firstButton;
+    public Button secondButton;
 
     private bool isRotating = false;
 
     private void Start()
     {
+        firstButton.onClick.AddListener(() =>
+        {
         // 右ボタンが押されたときに実行する処理を設定する
         rightButton.onClick.AddListener(() =>
         {
@@ -26,12 +30,14 @@ public class RotateObj : MonoBehaviour
         // 左ボタンが押されたときに実行する処理を設定する
         leftButton.onClick.AddListener(() =>
         {
-            if (!isRotating)
+            if (!isRotating )
             {
                 isRotating = true;
                 StartCoroutine(RotateWallCube(wallCube, -90f));
             }
         });
+        }
+        );
     }
 
     // 指定したWallCubeオブジェクトを指定した角度だけ回転させるコルーチン
