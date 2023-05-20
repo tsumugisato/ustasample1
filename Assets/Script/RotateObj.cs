@@ -12,10 +12,11 @@ public class RotateObj : MonoBehaviour
     public Button secondButton;
 
     private bool isRotating = false;
+    public bool isOption = false;
 
     private void Start()
     {
-        // 右ボタンが押されたときに実行する処理を設定する
+ // 右ボタンが押されたときに実行する処理を設定する
         rightButton.onClick.AddListener(() =>
         {
             if (!isRotating)
@@ -34,11 +35,13 @@ public class RotateObj : MonoBehaviour
                 StartCoroutine(RotateWallCube(wallCube, -90f));
             }
         });
+    
     }
 
     // 指定したWallCubeオブジェクトを指定した角度だけ回転させるコルーチン
-    private IEnumerator RotateWallCube(GameObject wallCube, float angle)
+    public IEnumerator RotateWallCube(GameObject wallCube, float angle)
     {
+        if (isOption == true){
         Quaternion startRotation = wallCube.transform.rotation;
         Quaternion endRotation = startRotation * Quaternion.Euler(0f, angle, 0f);
         float elapsedTime = 0f;
@@ -54,5 +57,7 @@ public class RotateObj : MonoBehaviour
         wallCube.transform.rotation = endRotation;
 
         isRotating = false;
+        }
+       
     }
 }

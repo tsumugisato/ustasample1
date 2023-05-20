@@ -1149,7 +1149,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 56e248fd59cafc9fd6d5d64842b04a68
+      Hash: ab243503cf171fd435d9397313f08f52
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RotateObj

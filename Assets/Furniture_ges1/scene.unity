@@ -281,8 +281,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!114 &114254980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,8 +832,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!114 &281831196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1074,6 @@ MonoBehaviour:
   viewPointValue: 45
   subCamera: {fileID: 474998915}
   Camera: {fileID: 231095702}
-  acube: {fileID: 0}
 --- !u!1001 &314358727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2868,8 +2863,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!114 &914236749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2901,6 +2894,20 @@ MonoBehaviour:
   leftButton: {fileID: 1967763191}
   firstButton: {fileID: 1206477335}
   secondButton: {fileID: 1780949607}
+  isOption: 0
+--- !u!114 &914236753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914236745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1001 &924631056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3401,8 +3408,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!222 &1150622641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3696,7 +3701,6 @@ GameObject:
   - component: {fileID: 1206477340}
   - component: {fileID: 1206477335}
   - component: {fileID: 1206477339}
-  - component: {fileID: 1206477338}
   - component: {fileID: 1206477337}
   - component: {fileID: 1206477342}
   m_Layer: 5
@@ -3750,13 +3754,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 96db612920eb74d7fa9f2510fdd2ba33, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1206477337}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: RotateOption
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 914236745}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3785,22 +3789,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
---- !u!114 &1206477338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206477334}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a06ce9048de40e489e0e82545c285a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectRenderer: {fileID: 0}
-  newColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1206477339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3963,6 +3951,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5388523262566565402, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 914236751}
+    - targetCorrespondingSourceObject: {fileID: 5388523262566565402, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 914236753}
   m_SourcePrefab: {fileID: 100100000, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
 --- !u!1 &1237248724
 GameObject:
@@ -4191,7 +4182,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c98458455be827c41a2536fc1affd2e8, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: furniture
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c98458455be827c41a2536fc1affd2e8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4785,7 +4776,6 @@ MonoBehaviour:
   viewPointValue: 45
   subCamera: {fileID: 0}
   Camera: {fileID: 0}
-  acube: {fileID: 0}
 --- !u!114 &1472401657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,8 +4910,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!222 &1489926705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5123,8 +5111,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!114 &1501262004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5243,6 +5229,7 @@ MonoBehaviour:
   leftButton: {fileID: 1967763191}
   firstButton: {fileID: 1206477335}
   secondButton: {fileID: 1780949607}
+  isOption: 0
 --- !u!1001 &1590444419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5722,8 +5709,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!4 &1673138385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5861409178561632961, guid: a987a31ff611848f49d91e65c7e31ff1, type: 3}
@@ -5914,8 +5899,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!222 &1780949610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6094,8 +6077,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.5775833, y: 2.9363577, z: 3.301795}
-  m_Center: {x: -0.00011494689, y: 1.4620539, z: -1.5081495}
+  m_Size: {x: 6.5775833, y: 7.298109, z: 3.301795}
+  m_Center: {x: -0.00030277338, y: 3.643286, z: -1.5081177}
 --- !u!114 &1846291215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6111,8 +6094,9 @@ MonoBehaviour:
   wallCube: {fileID: 1846291204}
   rightButton: {fileID: 1237248727}
   leftButton: {fileID: 1967763191}
-  firstButton: {fileID: 0}
-  secondButton: {fileID: 0}
+  firstButton: {fileID: 1206477335}
+  secondButton: {fileID: 1780949607}
+  isOption: 0
 --- !u!1 &1859432641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6383,7 +6367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: df1666880554cd446af9d788cc7a7a19, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: furniture
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: df1666880554cd446af9d788cc7a7a19, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6494,8 +6478,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.6965213, y: 3.1700726, z: 3.723827}
-  m_Center: {x: -2.0943698e-10, y: 1.5930612, z: 0.0000019072056}
+  m_Size: {x: 7.6965213, y: 7.1502266, z: 3.723827}
+  m_Center: {x: 5.3650134e-10, y: 3.5831437, z: 0.0000019077502}
 --- !u!1 &1911766521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6733,8 +6717,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!222 &1923393157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7099,8 +7081,6 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
-  chair1: {fileID: 914236745}
-  table1: {fileID: 1518684013}
 --- !u!222 &2087214819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9674,6 +9654,7 @@ GameObject:
   - component: {fileID: 7498791009608708543}
   - component: {fileID: 7498791009608708547}
   - component: {fileID: 7498791009608708549}
+  - component: {fileID: 7498791009608708551}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -13745,7 +13726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7498791009608346716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.77, y: 3.06, z: 18.2}
+  m_LocalPosition: {x: -6.77, y: 3.06, z: 10.89}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13851,7 +13832,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!4 &7498791009608708548
 Transform:
@@ -13897,6 +13878,24 @@ Transform:
   m_Father: {fileID: 7498791009608708588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7498791009608708551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498791009608346716}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804218550fca04549b9c513b6a023398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimSensitivity: 10
+  positionX: 0
+  positionY: 0
+  viewPointValue: 45
+  subCamera: {fileID: 474998915}
+  Camera: {fileID: 231095702}
 --- !u!4 &7498791009608708552
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class DragObj : MonoBehaviour
     public Camera Camera;
     private float rotationAmount = 90f;
 
+
  
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,8 @@ public class DragObj : MonoBehaviour
             if(Physics.Raycast(ray,out hit, Mathf.Infinity))
             {
                 Debug.Log("ははは");
-                if (hit.collider.tag == "Player")
+                Debug.DrawRay(ray.origin, ray.direction * 30.0f, Color.red);
+                if (hit.collider.CompareTag("furniture"))
                 {
                     Debug.Log("iiii");
 
@@ -64,7 +66,6 @@ public class DragObj : MonoBehaviour
             //         cube = hit.transform;
             //     }
             // }
-            return;
 
             }
         }

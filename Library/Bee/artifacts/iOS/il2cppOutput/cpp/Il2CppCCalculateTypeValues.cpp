@@ -32133,7 +32133,7 @@ struct RightShiftUInt64_t4D6B46A549823D25E5D2FB85515ADC2CE56B9CBF  : public Righ
 {
 };
 
-struct U3CRotateWallCubeU3Ed__5_tF63B1316DA451A218A96557E022DA9030428CDC6  : public RuntimeObject
+struct U3CRotateWallCubeU3Ed__7_t39677BF2C51B93C16E32C85E4D6D70DC4E498989  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state_0;
 	RuntimeObject* ___U3CU3E2__current_1;
@@ -42250,7 +42250,9 @@ struct RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1  : public MonoBehavio
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___wallCube_5;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___rightButton_6;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___leftButton_7;
-	bool ___isRotating_8;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___firstButton_8;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___secondButton_9;
+	bool ___isRotating_10;
 };
 
 struct RuntimeBvhLoader_t377CE24CBED1B205DBC3F8CBB99A45460971120D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -48500,7 +48502,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize2472 = { sizeof(JoyStick_Mov
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2473;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2473 = { sizeof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474 = { sizeof(U3CRotateWallCubeU3Ed__5_tF63B1316DA451A218A96557E022DA9030428CDC6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474 = { sizeof(U3CRotateWallCubeU3Ed__7_t39677BF2C51B93C16E32C85E4D6D70DC4E498989), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2475;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2475 = { sizeof(RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2476;

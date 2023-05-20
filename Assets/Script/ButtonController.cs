@@ -26,9 +26,7 @@ public class  ButtonController : MonoBehaviour
 
     public bool OnKitchen = false;
 
-    public GameObject chair1;
-
-    public GameObject table1;
+    private GameObject furniture;
 
     private bool chairVisible = false;
 
@@ -37,6 +35,8 @@ public class  ButtonController : MonoBehaviour
 
 
     private SwitchPanels switchPanels; 
+
+    private RotateObj rotateObj; 
 
     // private bool chareCubeVisible = false;
     // private bool deskCubeVisible = false;
@@ -48,7 +48,7 @@ public class  ButtonController : MonoBehaviour
     // 初期化処理
     void Start()
     {
-
+       
         // glassButtonのOnClickイベントにOnglassButtonClick関数を追加する
         glassButton.onClick.AddListener(OnglassButtonClick);
         // RedButtonのOnClickイベントにOnRedButtonClick関数を追加する
@@ -124,7 +124,7 @@ public class  ButtonController : MonoBehaviour
     {
          tableVisible = !tableVisible;
 
-        table1.SetActive(tableVisible);
+          furniture.SetActive(tableVisible);
 
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
@@ -160,6 +160,8 @@ public class  ButtonController : MonoBehaviour
             }
         }
     }
+
+
 
      // RedButtonがクリックされたときに呼び出される関数
     void OnTileButtonClick()
@@ -208,7 +210,13 @@ public class  ButtonController : MonoBehaviour
 
         chairVisible = !chairVisible;
 
-        chair1.SetActive(chairVisible);
+        if (chairVisible){
+            rotateObj.isOption = true;
+        }else{
+            rotateObj.isOption = false;
+        }
+
+        furniture.SetActive(chairVisible);
 
 
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
@@ -241,5 +249,11 @@ public class  ButtonController : MonoBehaviour
                 renderer.material = woodMaterial;
             }
         }
+    }
+
+    public void RotateOption(GameObject selectfurniture){
+
+        furniture = selectfurniture;
+        rotateObj = furniture.GetComponent<RotateObj>();
     }
 }

@@ -18,7 +18,6 @@ public class JoyStick_Cam : MonoBehaviour
 
     public Camera subCamera;
     public Camera Camera;
-    public GameObject acube;
 
     private void Start()
     {
