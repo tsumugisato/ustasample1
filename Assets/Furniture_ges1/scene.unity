@@ -175,6 +175,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 79d412b1c73fbb44487cd094c182a9bb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1875868376}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 79d412b1c73fbb44487cd094c182a9bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1875868379}
   m_SourcePrefab: {fileID: 100100000, guid: 79d412b1c73fbb44487cd094c182a9bb, type: 3}
 --- !u!4 &24638346 stripped
 Transform:
@@ -281,6 +284,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!114 &114254980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 671, y: 47.693}
+  m_AnchoredPosition: {x: 671, y: 47.693115}
   m_SizeDelta: {x: -1354, y: -782.478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172885922
@@ -437,6 +441,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172885920}
   m_CullTransparentMesh: 1
+--- !u!1 &173212635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 92f18712826840f4bb15ca76d3f7d765, type: 3}
+  m_PrefabInstance: {fileID: 1054453170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228310017
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +841,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!114 &281831196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,7 +2082,10 @@ PrefabInstance:
     - {fileID: 9500000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1390135281}
   m_SourcePrefab: {fileID: 100100000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
 --- !u!4 &543585961 stripped
 Transform:
@@ -2847,7 +2860,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914236745}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96db612920eb74d7fa9f2510fdd2ba33, type: 3}
   m_Name: 
@@ -2863,6 +2876,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 914236745}
 --- !u!114 &914236749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,13 +3221,34 @@ PrefabInstance:
     - {fileID: 9500000, guid: 92f18712826840f4bb15ca76d3f7d765, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 92f18712826840f4bb15ca76d3f7d765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1054453174}
   m_SourcePrefab: {fileID: 100100000, guid: 92f18712826840f4bb15ca76d3f7d765, type: 3}
 --- !u!4 &1054453171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 92f18712826840f4bb15ca76d3f7d765, type: 3}
   m_PrefabInstance: {fileID: 1054453170}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1054453174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173212635}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 0}
+  rightButton: {fileID: 1237248727}
+  leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
+  isOption: 0
 --- !u!1 &1080392156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 71fc1db2e822af944b27e68ad66ed50f, type: 3}
@@ -3268,7 +3303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 671, y: 47.692}
+  m_AnchoredPosition: {x: 671, y: 47.691895}
   m_SizeDelta: {x: -1354, y: -782.476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104691685
@@ -3408,6 +3443,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!222 &1150622641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3648,7 +3684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 671, y: 47.692}
+  m_AnchoredPosition: {x: 671, y: 47.691895}
   m_SizeDelta: {x: -1354, y: -782.476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189680504
@@ -3700,7 +3736,6 @@ GameObject:
   - component: {fileID: 1206477341}
   - component: {fileID: 1206477340}
   - component: {fileID: 1206477335}
-  - component: {fileID: 1206477339}
   - component: {fileID: 1206477337}
   - component: {fileID: 1206477342}
   m_Layer: 5
@@ -3789,23 +3824,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
---- !u!114 &1206477339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206477334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
+  furniture: {fileID: 0}
 --- !u!222 &1206477340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3880,7 +3899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5388523262566565402, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: furniture
       objectReference: {fileID: 0}
     - target: {fileID: 6105262843224849088, guid: 2b999753b4bd447eb9c76356e903c4fe, type: 3}
       propertyPath: m_RootOrder
@@ -4612,6 +4631,29 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
   Radius: 10
   TriangleNum: 20
+--- !u!1 &1390135278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d734e0f1e8152164f912667b484f1bb9, type: 3}
+  m_PrefabInstance: {fileID: 543585960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1390135281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390135278}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 0}
+  rightButton: {fileID: 1237248727}
+  leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
+  isOption: 0
 --- !u!1 &1449707221
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,6 +4952,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!222 &1489926705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5007,7 +5050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 669.5, y: 47.692}
+  m_AnchoredPosition: {x: 669.5, y: 47.691895}
   m_SizeDelta: {x: -1357, y: -782.476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501018515
@@ -5111,6 +5154,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!114 &1501262004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,7 +5263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518684013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
   m_Name: 
@@ -5709,6 +5753,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!4 &1673138385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5861409178561632961, guid: a987a31ff611848f49d91e65c7e31ff1, type: 3}
@@ -5864,13 +5909,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 96db612920eb74d7fa9f2510fdd2ba33, type: 3}
+      - m_Target: {fileID: 1780949609}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: RotateOption
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1846291204}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5883,7 +5928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780949606}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96db612920eb74d7fa9f2510fdd2ba33, type: 3}
   m_Name: 
@@ -5899,6 +5944,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!222 &1780949610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6304,6 +6350,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 23e5f126029186c47a301cb4c506b280, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1873334412}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 23e5f126029186c47a301cb4c506b280, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1873334415}
   m_SourcePrefab: {fileID: 100100000, guid: 23e5f126029186c47a301cb4c506b280, type: 3}
 --- !u!4 &1873334409 stripped
 Transform:
@@ -6331,6 +6380,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9185217, y: 0.58655477, z: 0.08729335}
   m_Center: {x: -0.00000011920929, y: 0.00000025331974, z: 0.00000017695127}
+--- !u!114 &1873334415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708583369}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 1708583369}
+  rightButton: {fileID: 1967763191}
+  leftButton: {fileID: 0}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
+  isOption: 0
 --- !u!1 &1875868373 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 79d412b1c73fbb44487cd094c182a9bb, type: 3}
@@ -6357,6 +6424,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8297269, y: 1.0311058, z: 1.3967906}
   m_Center: {x: 0.000000975279, y: 0.5163859, z: -0.23509416}
+--- !u!114 &1875868379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875868373}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917613ab1383542cea3aeb64f7f47b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallCube: {fileID: 0}
+  rightButton: {fileID: 1237248727}
+  leftButton: {fileID: 1967763191}
+  firstButton: {fileID: 0}
+  secondButton: {fileID: 0}
+  isOption: 0
 --- !u!1001 &1897152827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6717,6 +6802,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!222 &1923393157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7081,6 +7167,7 @@ MonoBehaviour:
   tileMaterial: {fileID: 2100000, guid: 4f0f0f94d799942bf987143d08b3e9d0, type: 2}
   woodMaterial: {fileID: 2100000, guid: 21c68e6ca6181425d8a058ccc526b9d9, type: 2}
   OnKitchen: 0
+  furniture: {fileID: 0}
 --- !u!222 &2087214819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13770,7 +13857,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.55731344, y: 1.9464096, z: 0.31436223}
   m_Center: {x: 1.0702868, y: 0.1928266, z: -1.8813804}

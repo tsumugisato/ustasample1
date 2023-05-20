@@ -16,6 +16,9 @@ public class RotateObj : MonoBehaviour
 
     private void Start()
     {
+        // rightButton.gameObject.SetActive(false);
+        // leftButton.gameObject.SetActive(false);
+        
  // 右ボタンが押されたときに実行する処理を設定する
         rightButton.onClick.AddListener(() =>
         {
@@ -57,6 +60,12 @@ public class RotateObj : MonoBehaviour
         wallCube.transform.rotation = endRotation;
 
         isRotating = false;
+
+        // rightButton.gameObject.SetActive(true);
+        // leftButton.gameObject.SetActive(true);
+        // }else{
+        // rightButton.gameObject.SetActive(false);
+        // leftButton.gameObject.SetActive(false);
         }
        
     }

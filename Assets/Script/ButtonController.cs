@@ -28,11 +28,9 @@ public class  ButtonController : MonoBehaviour
 
     private GameObject furniture;
 
-    private bool chairVisible = false;
+    private bool selectVisible = false;
 
     private bool tableVisible = false;
-
-
 
     private SwitchPanels switchPanels; 
 
@@ -48,7 +46,6 @@ public class  ButtonController : MonoBehaviour
     // 初期化処理
     void Start()
     {
-       
         // glassButtonのOnClickイベントにOnglassButtonClick関数を追加する
         glassButton.onClick.AddListener(OnglassButtonClick);
         // RedButtonのOnClickイベントにOnRedButtonClick関数を追加する
@@ -59,9 +56,6 @@ public class  ButtonController : MonoBehaviour
         woodButton.onClick.AddListener(OnWoodButtonClick);
         //Debug.Log(switchpanels.Onwall)
        SwitchPanels switchPanels = FindObjectOfType<SwitchPanels>();
-  
-    // 値が保存されているときの処理
-
     }
 
 
@@ -102,30 +96,12 @@ public class  ButtonController : MonoBehaviour
              //   PlayerPrefs.DeleteKey("MyInt");
             }
         }
-        // if (FloorChange != null);
-        // {
-        //     // Rendererコンポーネントを取得する
-        //     Renderer renderer = FloorChange.GetComponent<Renderer>();
-
-        //     // Rendererコンポーネントがnullでないことを確認する
-        //     if (renderer != null && mySavedInt == 4)
-        //     {
-        //         // Materialを変更する
-                 
-        //      //   PlayerPrefs.DeleteKey("MyInt");
-        //     }
-        // }
-        
 
     }
 
     // RedButtonがクリックされたときに呼び出される関数
     void OnRedButtonClick()
     {
-         tableVisible = !tableVisible;
-
-          furniture.SetActive(tableVisible);
-
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("redmySavedInt=="+ mySavedInt);
@@ -207,19 +183,7 @@ public class  ButtonController : MonoBehaviour
      // RedButtonがクリックされたときに呼び出される関数
     void OnWoodButtonClick()
     {
-
-        chairVisible = !chairVisible;
-
-        if (chairVisible){
-            rotateObj.isOption = true;
-        }else{
-            rotateObj.isOption = false;
-        }
-
-        furniture.SetActive(chairVisible);
-
-
-        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+    int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("woodmySavedInt=="+ mySavedInt);
       
@@ -249,11 +213,26 @@ public class  ButtonController : MonoBehaviour
                 renderer.material = woodMaterial;
             }
         }
+        if (mySavedInt == 4){
+            selectVisible = !selectVisible;
+            Debug.Log(selectVisible + "選択状態");
+        }
     }
 
     public void RotateOption(GameObject selectfurniture){
 
         furniture = selectfurniture;
         rotateObj = furniture.GetComponent<RotateObj>();
+
+         Debug.Log(selectVisible + "状態");
+        if (selectVisible == true){
+            Debug.Log("aaa");
+            rotateObj.isOption = true;
+             
+        }else{
+            Debug.Log("bbb");
+            rotateObj.isOption = false;
+        }
+         furniture.SetActive(selectVisible);
     }
 }
