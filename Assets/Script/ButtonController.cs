@@ -30,22 +30,16 @@ public class  ButtonController : MonoBehaviour
 
     private bool selectVisible = false;
 
-    private bool tableVisible = false;
-
     private SwitchPanels switchPanels; 
 
     private RotateObj rotateObj; 
 
-    // private bool chareCubeVisible = false;
-    // private bool deskCubeVisible = false;
-    // private bool tileCubeVisible = false;
-
-
-      // int mySavedInt = PlayerPrefs.GetInt("MyInt");
+    private int s = 0;
 
     // 初期化処理
     void Start()
     {
+       // isButtonTapped = false;
         // glassButtonのOnClickイベントにOnglassButtonClick関数を追加する
         glassButton.onClick.AddListener(OnglassButtonClick);
         // RedButtonのOnClickイベントにOnRedButtonClick関数を追加する
@@ -55,7 +49,10 @@ public class  ButtonController : MonoBehaviour
         
         woodButton.onClick.AddListener(OnWoodButtonClick);
         //Debug.Log(switchpanels.Onwall)
-       SwitchPanels switchPanels = FindObjectOfType<SwitchPanels>();
+        SwitchPanels switchPanels = FindObjectOfType<SwitchPanels>();
+
+
+
     }
 
 
@@ -96,17 +93,19 @@ public class  ButtonController : MonoBehaviour
              //   PlayerPrefs.DeleteKey("MyInt");
             }
         }
+        
+       // isButtonTapped = true;
 
     }
 
     // RedButtonがクリックされたときに呼び出される関数
     void OnRedButtonClick()
     {
-        int mySavedInt = PlayerPrefs.GetInt("MyInt");
+
+   int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("redmySavedInt=="+ mySavedInt);
 
-        // Debug.Log("OnKitchen = " + switchPanels.OnKitchen);
         // objectToChangeがnullでないことを確認する
         if (wallChange != null);
         {
@@ -123,21 +122,21 @@ public class  ButtonController : MonoBehaviour
         }
         if (FloorChange != null);
         {
-
-            // Rendererコンポーネントを取得する
+              // Rendererコンポーネントを取得する
             Renderer renderer = FloorChange.GetComponent<Renderer>();
 
             // Rendererコンポーネントがnullでないことを確認する
             if (renderer != null && mySavedInt == 3)
             {
+            
                 // Materialを変更する
                 renderer.material = redMaterial;
                // PlayerPrefs.DeleteKey("MyInt");
             }
         }
+
+      //  isButtonTapped = true;
     }
-
-
 
      // RedButtonがクリックされたときに呼び出される関数
     void OnTileButtonClick()
@@ -183,6 +182,7 @@ public class  ButtonController : MonoBehaviour
      // RedButtonがクリックされたときに呼び出される関数
     void OnWoodButtonClick()
     {
+       
     int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
     Debug.Log("woodmySavedInt=="+ mySavedInt);
@@ -201,7 +201,7 @@ public class  ButtonController : MonoBehaviour
                // PlayerPrefs.DeleteKey("MyInt");
             }
         }
-        if (FloorChange != null);
+        if (FloorChange != null)
         {
             // Rendererコンポーネントを取得する
             Renderer renderer = FloorChange.GetComponent<Renderer>();
@@ -213,26 +213,29 @@ public class  ButtonController : MonoBehaviour
                 renderer.material = woodMaterial;
             }
         }
-        if (mySavedInt == 4){
-            selectVisible = !selectVisible;
-            Debug.Log(selectVisible + "選択状態");
-        }
+
+       // isButtonTapped = true;
     }
 
     public void RotateOption(GameObject selectfurniture){
 
         furniture = selectfurniture;
         rotateObj = furniture.GetComponent<RotateObj>();
-
          Debug.Log(selectVisible + "状態");
         if (selectVisible == true){
             Debug.Log("aaa");
             rotateObj.isOption = true;
-             
+            rotateObj.rightButton.gameObject.SetActive(true);
+            rotateObj.leftButton.gameObject.SetActive(true);
+            furniture.SetActive(true);
+            selectVisible = !selectVisible;
         }else{
             Debug.Log("bbb");
             rotateObj.isOption = false;
+            rotateObj.rightButton.gameObject.SetActive(false);
+            rotateObj.leftButton.gameObject.SetActive(false);
+            furniture.SetActive(false);
+            selectVisible = !selectVisible;
         }
-         furniture.SetActive(selectVisible);
     }
 }

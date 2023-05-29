@@ -18,6 +18,8 @@ public class RotateObj : MonoBehaviour
     {
         // rightButton.gameObject.SetActive(false);
         // leftButton.gameObject.SetActive(false);
+
+       ButtonController buttonObj = new ButtonController();
         
  // 右ボタンが押されたときに実行する処理を設定する
         rightButton.onClick.AddListener(() =>
@@ -61,11 +63,6 @@ public class RotateObj : MonoBehaviour
 
         isRotating = false;
 
-        // rightButton.gameObject.SetActive(true);
-        // leftButton.gameObject.SetActive(true);
-        // }else{
-        // rightButton.gameObject.SetActive(false);
-        // leftButton.gameObject.SetActive(false);
         }
        
     }
