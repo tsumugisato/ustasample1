@@ -1405,12 +1405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a06ce9048de40e489e0e82545c285a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectRenderer: {fileID: 0}
-  newColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!114 &281831197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2651,7 +2645,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26676
+  m_Name: pb_Mesh25816
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3061,7 +3055,7 @@ GameObject:
   - component: {fileID: 613097621}
   - component: {fileID: 613097620}
   - component: {fileID: 613097619}
-  - component: {fileID: 613097623}
+  - component: {fileID: 613097622}
   m_Layer: 5
   m_Name: Screenshot
   m_TagString: Untagged
@@ -3185,7 +3179,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613097617}
   m_CullTransparentMesh: 1
---- !u!114 &613097623
+--- !u!114 &613097622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4180,7 +4174,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25126
+  m_Name: pb_Mesh25380
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -15969,17 +15963,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7498791009608346716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 804218550fca04549b9c513b6a023398, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c600442bef0b4a1886d1534e114ebd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimSensitivity: 10
-  positionX: 0
-  positionY: 0
-  viewPointValue: 45
-  subCamera: {fileID: 474998915}
-  Camera: {fileID: 231095702}
+  cam: {fileID: 474998915}
 --- !u!4 &7498791009608708552
 Transform:
   m_ObjectHideFlags: 0

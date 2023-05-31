@@ -384,6 +384,7 @@
 "Assets/Script/GameManager.cs"
 "Assets/Script/JoyStick_Cam.cs"
 "Assets/Script/JoyStick_Move.cs"
+"Assets/Script/PinchOut.cs"
 "Assets/Script/Player.cs"
 "Assets/Script/RotateObj.cs"
 "Assets/Script/ScreenShot.cs"
