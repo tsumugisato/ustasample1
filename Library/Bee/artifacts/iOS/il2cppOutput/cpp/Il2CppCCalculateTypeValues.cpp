@@ -32133,13 +32133,13 @@ struct RightShiftUInt64_t4D6B46A549823D25E5D2FB85515ADC2CE56B9CBF  : public Righ
 {
 };
 
-struct U3CRotateWallCubeU3Ed__7_t39677BF2C51B93C16E32C85E4D6D70DC4E498989  : public RuntimeObject
+struct U3CRotateWallCubeU3Ed__8_t3C97A9F6C54AC9E523811BC86F3CBD4C2AD84478  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state_0;
 	RuntimeObject* ___U3CU3E2__current_1;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___wallCube_2;
-	float ___angle_3;
-	RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1* ___U3CU3E4__this_4;
+	RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1* ___U3CU3E4__this_2;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___wallCube_3;
+	float ___angle_4;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CstartRotationU3E5__2_5;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CendRotationU3E5__3_6;
 	float ___U3CelapsedTimeU3E5__4_7;
@@ -41881,11 +41881,11 @@ struct ButtonController_t8BBD437FF0ACF311359579ED9B00DC8DB2A30DEB  : public Mono
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___tileMaterial_13;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___woodMaterial_14;
 	bool ___OnKitchen_15;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___chair1_16;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___table1_17;
-	bool ___chairVisible_18;
-	bool ___tableVisible_19;
-	SwitchPanels_t45F6325F460FFE1457B666F540999E15A8EF546A* ___switchPanels_20;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___furniture_16;
+	bool ___selectVisible_17;
+	SwitchPanels_t45F6325F460FFE1457B666F540999E15A8EF546A* ___switchPanels_18;
+	RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1* ___rotateObj_19;
+	int32_t ___s_20;
 };
 
 struct ButtonStripField_tE6F879C441B5054B9905705BD471FD45AF928AED  : public BaseField_1_tB351B262306464787F5A31B33CDC431E89796615
@@ -41905,12 +41905,6 @@ struct CameraFollowTarget_t3D7D7201BDC32D9DCA6A881F21D33181FB731744  : public Mo
 {
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___target_5;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___offset_6;
-};
-
-struct ChangeColor_t70B53D9F65E73F39B15A13EDB83B60E1C29BB9C1  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ___objectRenderer_5;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___newColor_6;
 };
 
 struct ChunkDisappearImageTest_tCF272CA097DCF3CCE1B5915AC4E31B69C81B7663  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -42079,7 +42073,6 @@ struct JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9  : public MonoBeha
 	float ___tempPosY_11;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___subCamera_14;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___Camera_15;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___acube_16;
 };
 
 struct JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9_StaticFields
@@ -42191,6 +42184,21 @@ struct MuscleInspector_tE489D9418EE8A4F0F0B0088562B99DB62F7EEBAE  : public MonoB
 {
 };
 
+struct PinchOut_tDC266F98DB74B0EB69D30CD05684D43462E04551  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___startPos_5;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___mouseStartPos_6;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___cam_7;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___subCam_8;
+	float ___dist0_9;
+	float ___dist1_10;
+	float ___scale_11;
+	float ___oldDist_12;
+	float ___minRate_13;
+	float ___maxRate_14;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___v_15;
+};
+
 struct Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	float ___speed_5;
@@ -42253,6 +42261,7 @@ struct RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1  : public MonoBehavio
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___firstButton_8;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___secondButton_9;
 	bool ___isRotating_10;
+	bool ___isOption_11;
 };
 
 struct RuntimeBvhLoader_t377CE24CBED1B205DBC3F8CBB99A45460971120D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -48488,21 +48497,21 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize2465 = { sizeof(ButtonContro
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2466;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2466 = { sizeof(CameraFollowTarget_t3D7D7201BDC32D9DCA6A881F21D33181FB731744), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2467;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2467 = { sizeof(ChangeColor_t70B53D9F65E73F39B15A13EDB83B60E1C29BB9C1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2467 = { sizeof(DragObj_t6D1568F05729B1EF70588F1A817E4746CAE7732F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2468;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2468 = { sizeof(DragObj_t6D1568F05729B1EF70588F1A817E4746CAE7732F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2468 = { sizeof(FPSController_tFB4512B5BE011310B5254126A94F17FEDDABDF01), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2469;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2469 = { sizeof(FPSController_tFB4512B5BE011310B5254126A94F17FEDDABDF01), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2469 = { sizeof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2470;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2470 = { sizeof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2470 = { sizeof(JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9), -1, sizeof(JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2471;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2471 = { sizeof(JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9), -1, sizeof(JoyStick_Cam_t5432D0661E52453E172EE27C202D133E5383C2A9_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2471 = { sizeof(JoyStick_Move_t54ACB5CE3D93B2836377FD69288B88BCBB195DB6), -1, sizeof(JoyStick_Move_t54ACB5CE3D93B2836377FD69288B88BCBB195DB6_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2472;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2472 = { sizeof(JoyStick_Move_t54ACB5CE3D93B2836377FD69288B88BCBB195DB6), -1, sizeof(JoyStick_Move_t54ACB5CE3D93B2836377FD69288B88BCBB195DB6_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2472 = { sizeof(PinchOut_tDC266F98DB74B0EB69D30CD05684D43462E04551), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2473;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2473 = { sizeof(Player_tF98BD09D3495D2FF1922E5D34866AEAC6AE2DF74), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474 = { sizeof(U3CRotateWallCubeU3Ed__7_t39677BF2C51B93C16E32C85E4D6D70DC4E498989), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize2474 = { sizeof(U3CRotateWallCubeU3Ed__8_t3C97A9F6C54AC9E523811BC86F3CBD4C2AD84478), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2475;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize2475 = { sizeof(RotateObj_t32BB64CD97276A6938F4DE2E11B99AC7A1C329A1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2476;

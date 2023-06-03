@@ -4,22 +4,31 @@
 // using System.IO;
 // using UnityEngine;
 
-// /// <summary>
+
 // /// 指定されたカメラの内容をキャプチャするサンプル
-// /// </summary>
+
 // public class ScreenShot : MonoBehaviour
 // {
 //     [SerializeField] private Camera _camera;
-//     [SerializeField] private Button _button;
+//     public Button button;
+//     private int counter = 0;
+
+//     //  public Button screenButton;
 
 //      private void Start()
 //     {
-//         _button.onClick.AddListener(SaveScreenShot);
+//         button.onClick.AddListener(Increment);
 //     }
 
 //     public void SaveScreenShot()
 //     {
-//         CaptureScreenShot("Assets/CameraScreenShot.png");
+
+//         // カウンターを1ずつ増やす
+//         counter++;
+
+//         // テキスト表示を更新
+    
+//         CaptureScreenShot("Assets/CameraScreenShot.png"+counter.ToString());
 //         Debug.Log("スクリーンショットが保存されました。");
 //     }
 
