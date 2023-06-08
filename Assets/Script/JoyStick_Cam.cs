@@ -18,6 +18,7 @@ public class JoyStick_Cam : MonoBehaviour
 
     public Camera subCamera;
     public Camera Camera;
+    public Camera ThirdCamera;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class JoyStick_Cam : MonoBehaviour
     public void Move(BaseEventData data)
     {
 
-         if (subCamera.enabled == true){
+         if (subCamera.enabled == true || ThirdCamera.enabled == true){
 
          Debug.Log("uuuuuuu");
         PointerEventData pointer = data as PointerEventData;
@@ -51,7 +52,7 @@ public class JoyStick_Cam : MonoBehaviour
     {
          Debug.Log("tttttt");
 
-        if(positionX != tempPosX  && subCamera.enabled == true)
+        if(positionX != tempPosX  && (subCamera.enabled == true || ThirdCamera.enabled == true))
         {  
 
            
@@ -77,7 +78,7 @@ public class JoyStick_Cam : MonoBehaviour
             tempPosX = positionX;
         }
 
-         if(positionY != tempPosY && subCamera.enabled == true)
+         if(positionY != tempPosY && (subCamera.enabled == true || ThirdCamera.enabled == true))
         {
               Debug.Log("ggggg");
             if(tempPosY == 0)
@@ -105,7 +106,7 @@ public class JoyStick_Cam : MonoBehaviour
     
     public void PointerUp(BaseEventData data)
     {
-        if (subCamera.enabled == true){
+        if (subCamera.enabled == true || ThirdCamera.enabled == true){
 Debug.Log("llllllll");
         PositionInitialization();
 

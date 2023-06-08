@@ -18,10 +18,10 @@ public class Player : MonoBehaviour
     {
         Vector3 moveDir = ((transform.forward * JoyStick_Move.joyStickPosY) +
          (transform.right * JoyStick_Move.joyStickPosX)).normalized;
-
-         transform.position += moveDir * speed * Time.deltaTime;
-
-         transform.rotation = Quaternion.Euler(JoyStick_Cam.rotY,JoyStick_Cam.rotX,0);
+//移動
+        // transform.position += moveDir * speed * Time.deltaTime;
+//角度
+        transform.rotation = Quaternion.Euler(JoyStick_Cam.rotY,JoyStick_Cam.rotX,0);
 
          //Playerの左右移動のコードの下に追記
         if (Input.GetKeyDown("right"))

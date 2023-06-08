@@ -34,6 +34,8 @@ public class  ButtonController : MonoBehaviour
 
     private RotateObj rotateObj; 
 
+    public GameObject furnitureCube;
+
     private int s = 0;
 
     // 初期化処理
@@ -220,11 +222,12 @@ public class  ButtonController : MonoBehaviour
     public void RotateOption(GameObject selectfurniture){
 
         furniture = selectfurniture;
-        rotateObj = furniture.GetComponent<RotateObj>();
+        rotateObj = furnitureCube.GetComponent<RotateObj>();
          Debug.Log(selectVisible + "状態");
         if (selectVisible == true){
             Debug.Log("aaa");
             rotateObj.isOption = true;
+            rotateObj.wallCube = furniture;
             rotateObj.rightButton.gameObject.SetActive(true);
             rotateObj.leftButton.gameObject.SetActive(true);
             furniture.SetActive(true);
@@ -232,6 +235,7 @@ public class  ButtonController : MonoBehaviour
         }else{
             Debug.Log("bbb");
             rotateObj.isOption = false;
+            rotateObj.wallCube = null;
             rotateObj.rightButton.gameObject.SetActive(false);
             rotateObj.leftButton.gameObject.SetActive(false);
             furniture.SetActive(false);
