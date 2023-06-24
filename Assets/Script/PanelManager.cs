@@ -16,7 +16,8 @@ public class PanelManager : MonoBehaviour
     {
         panelRectTransform = panel.GetComponent<RectTransform>();
         initialPosition = panelRectTransform.anchoredPosition;
-        targetPosition = Vector3.zero;
+        targetPosition = targetPosition = new Vector3(650, 0, 0);
+;
     }
 
 
@@ -24,15 +25,25 @@ public class PanelManager : MonoBehaviour
 {
     isPanelVisible = !isPanelVisible;
 
+    // if (isPanelVisible)
+    // {
+    //     panelRectTransform.anchoredPosition = targetPosition;
+    //     LeanTween.move(panelRectTransform, initialPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
+    // }
+    // else
+    // {
+    //     LeanTween.move(panelRectTransform, targetPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
+    // }
     if (isPanelVisible)
-    {
-        panelRectTransform.anchoredPosition = targetPosition;
-        LeanTween.move(panelRectTransform, initialPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
-    }
-    else
-    {
-        LeanTween.move(panelRectTransform, targetPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
-    }
+{
+    panelRectTransform.anchoredPosition = initialPosition;
+    LeanTween.move(panelRectTransform, targetPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
+}
+else
+{
+    LeanTween.move(panelRectTransform, initialPosition, animationDuration).setEase(LeanTweenType.easeOutExpo);
+}
+
 }
 
 
