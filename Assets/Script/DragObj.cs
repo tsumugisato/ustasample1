@@ -10,6 +10,8 @@ public class DragObj : MonoBehaviour
     Transform cube;
     public Camera subCamera;
     public Camera Camera;
+    public Camera thirdCamera;
+    public Camera forthCamera;
     private float rotationAmount = 90f;
 
 
@@ -18,6 +20,7 @@ public class DragObj : MonoBehaviour
     void Start()
     {
         plane = new Plane(Vector3.up, Vector3.up);
+        
        
     }
  
@@ -26,16 +29,17 @@ public class DragObj : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if (Camera.enabled == true){ 
+            if (Camera.enabled == true || forthCamera.enabled == true){ 
 
             
             Debug.Log("ああああいいいいえええ");
             Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
+            Ray subRay = forthCamera.ScreenPointToRay(Input.mousePosition);
             
 
  
             RaycastHit hit;
-            if(Physics.Raycast(ray,out hit, Mathf.Infinity))
+            if(Physics.Raycast(ray,out hit, Mathf.Infinity) || Physics.Raycast(subRay,out hit, Mathf.Infinity))
             {
                 Debug.Log("ははは");
                 Debug.DrawRay(ray.origin, ray.direction * 30.0f, Color.red);
@@ -73,10 +77,13 @@ public class DragObj : MonoBehaviour
         {
             Debug.Log("ううううううおおおお");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray subRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             float rayDistance;
             plane.Raycast(ray, out rayDistance);
+            plane.Raycast(subRay, out rayDistance);
  
             cube.position = ray.GetPoint(rayDistance);
+            cube.position = subRay.GetPoint(rayDistance);
  
             if (Input.GetMouseButtonUp(0))
             {

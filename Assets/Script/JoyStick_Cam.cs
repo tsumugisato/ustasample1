@@ -77,8 +77,8 @@ public class JoyStick_Cam : MonoBehaviour
 
             tempPosX = positionX;
         }
-
-         if(positionY != tempPosY && (subCamera.enabled == true || ThirdCamera.enabled == true))
+        // if(positionY != tempPosY && (subCamera.enabled == true || ThirdCamera.enabled == true))
+         if(subCamera.enabled == true || ThirdCamera.enabled == true)
         {
               Debug.Log("ggggg");
             if(tempPosY == 0)
@@ -121,48 +121,3 @@ Debug.Log("llllllll");
         positionY = 0;
     }
 }
-
-
-// using UnityEngine;
-// using UnityEngine.EventSystems;
-
-// public class JoyStick_Cam : MonoBehaviour
-// {
-//     private bool isTouching = false;
-//     private Vector2 touchStartPosition;
-
-//     // 回転する速度
-//     public float rotationSpeed = 10f;
-
-//     void Update()
-//     {
-//         // 画面左半分をタッチしているかどうかをチェック
-//         if (Input.touchCount > 0 && Input.GetTouch(0).position.x < Screen.width / 2f)
-//         {
-//             Touch touch = Input.GetTouch(0);
-
-//             // タッチの開始
-//             if (touch.phase == TouchPhase.Began)
-//             {
-//                 isTouching = true;
-//                 touchStartPosition = touch.position;
-//             }
-//             // タッチの移動
-//             else if (touch.phase == TouchPhase.Moved && isTouching)
-//             {
-//                 // タッチした位置と現在の位置の差分を求める
-//                 Vector2 deltaPosition = touch.position - touchStartPosition;
-
-//                 // Playerオブジェクトを回転する
-//                 transform.Rotate(-deltaPosition.y * rotationSpeed * Time.deltaTime,
-//                                  deltaPosition.x * rotationSpeed * Time.deltaTime,
-//                                  0f);
-//             }
-//             // タッチの終了
-//             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-//             {
-//                 isTouching = false;
-//             }
-//         }
-//     }
-// }

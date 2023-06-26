@@ -7,6 +7,8 @@ public class  ButtonController : MonoBehaviour
     public GameObject wallChange;
 
     public GameObject FloorChange;
+
+    public GameObject WallChange;
     // glassButton
     public Button glassButton;
     // RedButton
@@ -59,7 +61,7 @@ public class  ButtonController : MonoBehaviour
 
 
     // glassButtonがクリックされたときに呼び出される関数
-    void OnglassButtonClick()
+    public void OnglassButtonClick()
     {
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
@@ -101,7 +103,7 @@ public class  ButtonController : MonoBehaviour
     }
 
     // RedButtonがクリックされたときに呼び出される関数
-    void OnRedButtonClick()
+    public void OnRedButtonClick()
     {
 
    int mySavedInt = PlayerPrefs.GetInt("MyInt");
@@ -141,7 +143,7 @@ public class  ButtonController : MonoBehaviour
     }
 
      // RedButtonがクリックされたときに呼び出される関数
-    void OnTileButtonClick()
+    public void OnTileButtonClick()
     {
         int mySavedInt = PlayerPrefs.GetInt("MyInt");
   
@@ -182,7 +184,7 @@ public class  ButtonController : MonoBehaviour
     }
 
      // RedButtonがクリックされたときに呼び出される関数
-    void OnWoodButtonClick()
+    public void OnWoodButtonClick()
     {
        
     int mySavedInt = PlayerPrefs.GetInt("MyInt");

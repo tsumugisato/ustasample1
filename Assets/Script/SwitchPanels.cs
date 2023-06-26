@@ -6,9 +6,11 @@ public class SwitchPanels : MonoBehaviour
     public GameObject wallPanel;
     public GameObject floorPanel;
     public GameObject kitchenPanel;
+    public GameObject furniturePanel;
     public Button wallButton;
     public Button floorButton;
     public Button kitchenButton;
+    public Button furnitureButton;
     public bool OnKitchen = false;
    
 
@@ -25,6 +27,10 @@ public class SwitchPanels : MonoBehaviour
         //   int mySavedInt = PlayerPrefs.GetInt("MyInt");
 
    wallButton.onClick.AddListener(ShowWallPanel);
+
+   furnitureButton.onClick.AddListener(ShowFurniturePanel);
+
+
 //        bool exist = PlayerPrefs.HasKey("MyInt");
 //        int mySavedInt = PlayerPrefs.GetInt("MyInt");
 
@@ -54,6 +60,8 @@ public class SwitchPanels : MonoBehaviour
 
         kitchenPanel.SetActive(false);
 
+        furniturePanel.SetActive(false);
+
          PlayerPrefs.DeleteKey("MyInt");
    
         PlayerPrefs.SetInt("MyInt", 2);
@@ -75,6 +83,8 @@ public class SwitchPanels : MonoBehaviour
 
         kitchenPanel.SetActive(false);
 
+        furniturePanel.SetActive(false);
+
          PlayerPrefs.DeleteKey("MyInt");
 
        PlayerPrefs.SetInt("MyInt", 3);
@@ -95,6 +105,8 @@ public class SwitchPanels : MonoBehaviour
 
          kitchenPanel.SetActive(true);
 
+         furniturePanel.SetActive(false);
+
          OnKitchen = true;
 
           PlayerPrefs.DeleteKey("MyInt");
@@ -106,6 +118,31 @@ public class SwitchPanels : MonoBehaviour
         // Debug.Log("mySavedInt=="+ mySavedInt);
            
      
+    }
+
+      public void ShowFurniturePanel()
+    {
+        Debug.Log("kitchen");
+
+        // wallPanelを非表示にする
+        wallPanel.SetActive(false);
+
+        // floorPanelを表示する
+        floorPanel.SetActive(false);
+
+         kitchenPanel.SetActive(false);
+
+         furniturePanel.SetActive(true);
+
+         OnKitchen = true;
+
+        PlayerPrefs.DeleteKey("MyInt");
+
+        PlayerPrefs.SetInt("MyInt", 5);
+
+        PlayerPrefs.Save();
+
+        // Debug.Log("mySavedInt=="+ mySavedInt);
     }
 
 
